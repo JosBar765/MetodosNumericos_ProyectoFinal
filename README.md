@@ -11,6 +11,7 @@ Este proyecto conecta una aplicación web con MATLAB usando Flask como backend y
 ### Verificación de pip
 
 Para verificar si tienes `pip` instalado, ejecuta en CMD: `pip --version`
+
 Si no tienes `pip`, puedes instalarlo ejecutando: `python -m ensurepip --upgrade`
 
 ### Instalación de librerías necesarias

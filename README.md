@@ -10,17 +10,12 @@ Este proyecto conecta una aplicación web con MATLAB usando Flask como backend y
 
 ### Verificación de pip
 
-Para verificar si tienes `pip` instalado, ejecuta en CMD:
-pip --version
-
-Si no tienes `pip`, puedes instalarlo ejecutando:
-python -m ensurepip --upgrade
+Para verificar si tienes `pip` instalado, ejecuta en CMD: `pip --version`
+Si no tienes `pip`, puedes instalarlo ejecutando: `python -m ensurepip --upgrade`
 
 ### Instalación de librerías necesarias
 
-Para instalar las librerías requeridas (Flask, Flask-CORS, y Waitress), ejecuta en CMD:
-pip install flask flask-cors waitress
-
+Para instalar las librerías requeridas (Flask, Flask-CORS, y Waitress), ejecuta en CMD: `pip install flask flask-cors waitress`
 
 Versiones recomendadas:
 
@@ -32,20 +27,15 @@ Versiones recomendadas:
 
 1. **Descargar MATLAB R2024b**
 2. **Abrir MATLAB como administrador**
-3. En la consola de MATLAB, ejecuta:
-
-cd(fullfile(matlabroot, 'extern', 'engines', 'python'))
-system('python setup.py install')
-
-4. Verifica la instalación de MATLAB Engine API for Python ejecutando en CMD: pip show matlabengine
+3. En la consola de MATLAB, ejecuta: `cd(fullfile(matlabroot, 'extern', 'engines', 'python'))`, `system('python setup.py install')`
+4. Verifica la instalación de MATLAB Engine API for Python ejecutando en CMD: `pip show matlabengine`
 
 La versión instalada debería ser algo como: matlabengine 24.2
 
 ## Ejecución
 
 1. Abre CMD y navega a la carpeta del proyecto:
-2. Ejecuta el servidor con: python server.py
+2. Ejecuta el servidor con: `python server.py`
 3. Abre el archivo `index.html` en tu navegador.
 
 ¡Listo para usar!
-

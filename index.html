@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <script>
+        function calcularPE() {
+            const data = {
+                'CF': document.getElementById("CF").value,
+                'CV': document.getElementById("CV").value,
+                'PV': document.getElementById("PV").value
+            };
+
+            fetch("http://127.0.0.1:8080/punto_equilibrio", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            }).then(response => response.json()).then(data => {
+                document.getElementById("punto_equilibrio").innerText = "Resultado: " + data.resultado;
+            });
+        }
+
+        function graficarPE() {
+            const data = {
+                'CF': document.getElementById("CF").value,
+                'CV': document.getElementById("CV").value,
+                'PV': document.getElementById("PV").value
+            };
+
+            fetch("http://127.0.0.1:8080/graficar_punto_equilibrio", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            }).then(res => res.json())
+                .then(data => {
+                    const img = document.getElementById("grafica");
+                    img.src = "data:image/png;base64," + data.imagen_base64;
+                });
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="CF" placeholder="Costos fijos">
+    <input type="number" id="CV" placeholder="Costos variables">
+    <input type="number" id="PV" placeholder="Precio de venta">
+    <button onclick="calcularPE()">Punto de Equilibrio</button>
+    <button onclick="graficarPE()">GraficarPunto de Equilibrio</button>
+    <p id="punto_equilibrio"></p>
+    <img id="grafica" alt="Gráfica del equilibrio financiero" />
+
+    <!-- DE MOMENTO, SOLO AGREGA LO QUE TE DIJE, YA PARA QUE FUNCIONE YO ME ENCARGO -->
+</body>
+
+</html>

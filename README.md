@@ -42,8 +42,13 @@ La versión instalada debería ser algo como: matlabengine 24.2
 
 ### Ejecución
 
-1. Abre CMD y navega a la carpeta del proyecto:
-2. Ejecuta el servidor con: `python server.py`
+1. Abre CMD y navega a la carpeta del proyecto
+2. Ejecuta el servidor con: `python server.py`. La actividad del servidor se mostrará con un mensaje en consola parecido a este: `INFO:waitress:Serving on http://0.0.0.0:8080`
 3. Abre el archivo `index.html` en tu navegador.
 
 ¡Listo para usar!
+
+### NOTAS
+
+- El puerto donde se ejecuta el servidor, puede llegar a variar
+- Para detener el servidor, se debe ejecutar la combinación de teclas `ctrl + c` en la consola

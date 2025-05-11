@@ -1,6 +1,11 @@
-# Proyecto Flask + MATLAB Engine
+# Proyecto Final de Método Numéricos
 
-Este proyecto conecta una aplicación web con MATLAB usando Flask como backend y el **MATLAB Engine API for Python**.
+Este proyecto conecta una aplicación web con MATLAB usando Flask como backend y el **MATLAB Engine API for Python** para el cálculo del **Punto de Equilibrio Financiero**.
+
+## Autores
+
+- [@JosBar765](https://www.github.com/JosBar765) | Josué Barrios 0901-23-4777
+- [@JosBar765](https://www.github.com/JosBar765) | Andrés Ixcajoc 0901-23-
 
 ## Requisitos
 

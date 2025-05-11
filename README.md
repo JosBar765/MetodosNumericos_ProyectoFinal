@@ -1,6 +1,8 @@
 # Proyecto Final de Método Numéricos
 
-Este proyecto conecta una aplicación web con MATLAB usando Flask como backend y el **MATLAB Engine API for Python** para el cálculo del **Punto de Equilibrio Financiero**.
+## Descripción
+
+Este proyecto conecta una aplicación web con MATLAB a través de Flask como backend y el **MATLAB Engine API for Python**. Permite a los usuarios ingresar datos financieros, como costos fijos y variables, para calcular el **Punto de Equilibrio Financiero**. Flask maneja las solicitudes del cliente, enviando los datos a MATLAB para realizar los cálculos, y luego devuelve los resultados al usuario en tiempo real. Este enfoque aprovecha las capacidades de MATLAB para el análisis financiero y proporciona una solución eficiente y escalable para la toma de decisiones financieras.
 
 ## Autores
 
@@ -12,6 +14,8 @@ Este proyecto conecta una aplicación web con MATLAB usando Flask como backend y
 - **Python**: 3.10.10  
 - **pip**: 22.3.1  
 - **MATLAB**: R2024b
+
+***
 
 ### Verificación de pip
 

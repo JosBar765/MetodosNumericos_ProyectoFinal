@@ -26,7 +26,7 @@ function resultado = graficar_punto_equilibrio(CF, CV, PV)
     grid on;
 
     % Guardar imagen
-    resultado = fullfile(tempdir, 'grafico_equilibrio.png');
+    resultado = fullfile(tempdir, 'graficar_punto_equilibrio.png');
     saveas(f, resultado);
 
     % Cerrar figura

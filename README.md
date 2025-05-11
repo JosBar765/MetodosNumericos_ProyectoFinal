@@ -33,13 +33,16 @@ Versiones recomendadas:
 1. **Descargar MATLAB R2024b**
 2. **Abrir MATLAB como administrador**
 3. En la consola de MATLAB, ejecuta:
+
 cd(fullfile(matlabroot, 'extern', 'engines', 'python'))
+
 system('python setup.py install')
-4. Verifica la instalación de MATLAB Engine API for Python ejecutando en CMD:
-pip show matlabengine
+
+4. Verifica la instalación de MATLAB Engine API for Python ejecutando en CMD: pip show matlabengine
+
 La versión instalada debería ser algo como: matlabengine 24.2
 
-## Ejecución del servidor
+## Ejecución
 
 1. Abre CMD y navega a la carpeta del proyecto:
 2. Ejecuta el servidor con: python server.py

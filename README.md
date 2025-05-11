@@ -35,7 +35,6 @@ Versiones recomendadas:
 3. En la consola de MATLAB, ejecuta:
 
 cd(fullfile(matlabroot, 'extern', 'engines', 'python'))
-
 system('python setup.py install')
 
 4. Verifica la instalación de MATLAB Engine API for Python ejecutando en CMD: pip show matlabengine

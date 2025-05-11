@@ -25,14 +25,14 @@ def punto_equilibrio():
     return jsonify({"resultado": float(resultado)})
 
 @app.route("/graficar_punto_equilibrio", methods=["POST"])
-def graficar_equilibrio():
+def graficar_punto_equilibrio():
     datos = request.json
     cf = float(datos["CF"])
     cv = float(datos["CV"])
     pv = float(datos["PV"])
     
     # Ejecutar función de MATLAB que genera imagen
-    ruta = eng.graficar_equilibrio(cf, cv, pv)
+    ruta = eng.graficar_punto_equilibrio(cf, cv, pv)
     ruta_str = ruta if isinstance(ruta, str) else ruta[0]  # MATLAB devuelve lista
 
     # Leer imagen y codificar a base64

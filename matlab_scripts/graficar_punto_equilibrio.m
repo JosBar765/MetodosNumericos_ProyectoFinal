@@ -21,7 +21,6 @@ function resultado = graficar_punto_equilibrio(CF, CV, PV)
 
     xlabel('Unidades producidas / vendidas');
     ylabel('Dinero ($)');
-    title('Análisis gráfico del punto de equilibrio financiero');
     legend('Ingresos', 'Costos Totales', 'Costos Fijos', 'Punto de Equilibrio', 'Location', 'northwest');
     grid on;
 

@@ -1,30 +1,41 @@
 function resultado = punto_equilibrio(CF, CV, PV)
-    f = @(x) (PV - CV) * x - CF;
-    f_prima = @(x) PV - CV;
-    
-    xi = CF / max(PV - CV, 1);
-    tolerancia = 1e-6;
-    error_rel = NaN;
-    iter = 1;
+    f = @(x) (PV - CV) * x - CF;  % Función objetivo: utilidad = 0
 
-    while f_prima(xi) ~= 0
-        xi_sig = xi - f(xi)/f_prima(xi);
+a = 0;
+b = 10000;  % Un límite alto estimado
+tolerancia = 1e-6;
+iter = 1;
+max_iter = 100;
+error_rel = NaN;
+
+while (b - a)/2 > tolerancia && iter <= max_iter
+    xi = (a + b)/2;  % Punto medio
+    fxi = f(xi);
     
-        if iter > 1
-            error_rel = abs(xi_sig - xi) / abs(xi_sig);
-        end
-        
-        if iter > 1 && error_rel < tolerancia
+    if fxi == 0  % Solución exacta
+        break;
+    elseif f(a)*fxi < 0
+        b = xi;
+    else
+        a = xi;
+    end
+    
+    % Error relativo (opcional)
+    if iter > 1
+        error_rel = abs(b - a) / abs(xi);
+        if error_rel < tolerancia
             break;
-        else
-            iter = iter + 1;
-            xi = xi_sig;
         end
     end
     
-    ingresos = PV * xi;
-    costos_totales = CF + CV * xi;
+    iter = iter + 1;
+end
 
-    % resultado = {xi, ingresos, costos_totales};
-    resultado = xi;
+% Calcular ingresos y costos al punto de equilibrio
+ingresos = PV * xi;
+costos_totales = CF + CV * xi;
+
+% resultado = {xi, ingresos, costos_totales};
+resultado = xi;
+
 end

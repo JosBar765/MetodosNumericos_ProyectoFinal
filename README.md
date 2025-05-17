@@ -57,4 +57,4 @@ La versión instalada debería ser algo como: matlabengine 24.2
 5. Haz doble clic sobre el archivo `index.html`
 6. El archivo se abrirá en tu navegador y estará listo para usarse
 
-**NOTA:** Para detener el servidor, se debe ejecutar la siguiente combinación de teclas: `ctrl + c`, en la ventana CMD que se abrió al ejecutar el servidor.
+**NOTA:** Para detener el servidor, se debe ejecutar la siguiente combinación de teclas: `ctrl + c`, en la ventana CMD que se abrió al ejecutar el servidor. Este proceso puede tardar unos segundos.

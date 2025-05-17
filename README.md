@@ -2,10 +2,10 @@
 
 Este proyecto conecta una aplicación web con MATLAB a través de Flask como backend y el **MATLAB Engine API for Python**. Permite a los usuarios ingresar datos financieros, como costos fijos y variables, para calcular el **Punto de Equilibrio Financiero**. Flask maneja las solicitudes del cliente, enviando los datos a MATLAB para realizar los cálculos, y luego devuelve los resultados al usuario en tiempo real. Este enfoque aprovecha las capacidades de MATLAB para el análisis financiero y proporciona una solución eficiente y escalable para la toma de decisiones financieras.
 
-## Autores
+## Autor
 
 - [@JosBar765](https://www.github.com/JosBar765) | Josué Barrios 0901-23-4777
-- [@JosBar765](https://www.github.com/JosBar765) | Andrés Ixcajoc 0901-23-
+- [@AndrewUMG](https://www.github.com/AndrewUMG) | Andrés Ixcajoc 0901-23-19115
 
 ## Requisitos
 
@@ -42,13 +42,8 @@ La versión instalada debería ser algo como: matlabengine 24.2
 
 ### Ejecución
 
-1. Abre CMD y navega a la carpeta del proyecto
-2. Ejecuta el servidor con: `python server.py`. La actividad del servidor se mostrará con un mensaje en consola parecido a este: `INFO:waitress:Serving on http://0.0.0.0:8080`
+1. Abre CMD y navega a la carpeta del proyecto:
+2. Ejecuta el servidor con: `python server.py`
 3. Abre el archivo `index.html` en tu navegador.
 
 ¡Listo para usar!
-
-### NOTAS
-
-- El puerto donde se ejecuta el servidor, puede llegar a variar
-- Para detener el servidor, se debe ejecutar la combinación de teclas `ctrl + c` en la consola

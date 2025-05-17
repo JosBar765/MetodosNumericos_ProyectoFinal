@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.contenedor {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    /* ocupa todo el ancho */
+    box-sizing: border-box;
+    /* incluye padding dentro del ancho */
+    justify-content: center;
+    /* opcional si quieres centrar */
+}
+
+.formulario,
+.grafico {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.formulario {
+    width: px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.grupo {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+    /* evita que los botones se bajen */
+}
+
+.campo input.nombre {
+    width: 100px;
+    padding: 4px;
+    font-size: 13px;
+}
+
+.campo input[type="text"],
+.campo input[type="number"] {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.campo input[type="number"] {
+    width: 100px;
+    padding: 6px;
+    font-size: 14px;
+}
+
+.campo input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.campo button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.campo button:hover {
+    transform: scale(1.1);
+}
+
+.acciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.acciones button {
+    padding: 8px 16px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.acciones button:hover {
+    background-color: #e69500;
+}
+
+.grafico {
+    width: 400px;
+    text-align: center;
+}
+
+.grafico img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+#interpretacion {
+    color: red;
+    font-weight: bold;
+}
+
+.boton-mas {
+    color: green;
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-borrar {
+    color: red;
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-editar,
+.boton-borrar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 2px;
+}
+
+.boton-editar {
+    color: #007bff;
+}
+
+.boton-borrar {
+    color: red;
+}

@@ -1,53 +1,63 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-    <script>
-        function calcularPE() {
-            const data = {
-                'CF': document.getElementById("CF").value,
-                'CV': document.getElementById("CV").value,
-                'PV': document.getElementById("PV").value
-            };
-
-            fetch("http://127.0.0.1:8080/punto_equilibrio", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
-            }).then(response => response.json()).then(data => {
-                document.getElementById("punto_equilibrio").innerText = "Resultado: " + data.resultado;
-            });
-        }
-
-        function graficarPE() {
-            const data = {
-                'CF': document.getElementById("CF").value,
-                'CV': document.getElementById("CV").value,
-                'PV': document.getElementById("PV").value
-            };
-
-            fetch("http://127.0.0.1:8080/graficar_punto_equilibrio", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
-            }).then(res => res.json())
-                .then(data => {
-                    const img = document.getElementById("grafica");
-                    img.src = "data:image/png;base64," + data.imagen_base64;
-                });
-        }
-    </script>
+    <meta charset="UTF-8">
+    <title>Calculadora de Punto de Equilibrio</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <input type="number" id="CF" placeholder="Costos fijos">
-    <input type="number" id="CV" placeholder="Costos variables">
-    <input type="number" id="PV" placeholder="Precio de venta">
-    <button onclick="calcularPE()">Punto de Equilibrio</button>
-    <button onclick="graficarPE()">GraficarPunto de Equilibrio</button>
-    <p id="punto_equilibrio"></p>
-    <img id="grafica" alt="Gráfica del equilibrio financiero" />
 
-    <!-- DE MOMENTO, SOLO AGREGA LO QUE TE DIJE, YA PARA QUE FUNCIONE YO ME ENCARGO -->
+    <div class="contenedor">
+        <div class="formulario">
+            <h2>Calculadora de Punto de Equilibrio</h2>
+
+            <div class="grupo" id="grupoCF">
+                <label>Costos Fijos</label>
+                <div class="campo">
+                    <button class="boton-editar" onclick="editarNombre(this)">✏️</button>
+                    <input type="text" class="nombre" placeholder="Nombre" disabled>
+                    <input type="number" class="montoCF" placeholder="Q.0.00">
+                    <button class="boton-borrar" onclick="this.parentElement.remove()">🗑️</button>
+                </div>
+                <button class="boton-mas" onclick="agregarCampo('grupoCF','montoCF')">➕</button>
+            </div>
+
+            <div class="grupo" id="grupoCV">
+                <label>Costos Variables (Unidad)</label>
+                <div class="campo">
+                    <button class="boton-editar" onclick="editarNombre(this)">✏️</button>
+                    <input type="text" class="nombre" placeholder="Nombre" disabled>
+                    <input type="number" class="montoCV" placeholder="Q.0.00">
+                    <button class="boton-borrar" onclick="this.parentElement.remove()">🗑️</button>
+                </div>
+                <button class="boton-mas" onclick="agregarCampo('grupoCV','montoCV')">➕</button>
+            </div>
+
+
+            <div class="grupo" id="grupoPV">
+                <label>Precio de Venta (Unitario)</label>
+                <div class="campo">
+                    <span>Q.</span>
+                    <input type="number" id="montoPV" step="1" placeholder="5.25">
+                </div>
+            </div>
+
+            <div class="acciones">
+                <button onclick="calcularPE()">Resolver</button>
+                <button onclick="limpiarCampos()">Limpiar</button>
+            </div>
+        </div>
+
+        <div class="grafico">
+            <h3>Gráfica de Punto de Equilibrio</h3>
+            <img id="grafica" src="" alt="Gráfica del equilibrio financiero">
+            <p id="interpretacion">El PE es: </p>
+        </div>
+
+        <script src="scripts/script.js"></script>
+    </div>
 </body>
 
 </html>

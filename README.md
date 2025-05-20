@@ -42,8 +42,8 @@ La versión instalada debería ser algo como: matlabengine 24.2
 
 ### Cambio de ruta
 
-1. Dirígete a la ruta donde se encuentra la carpeta (no necesitas abrirla)
-2. Copia la ruta de dicha carpeta
+1. Dirígete a la ruta donde se encuentra la carpeta y ábrela
+2. Copia la ruta
 3. Dirígete al archivo `server.py` que se encuentra en la carpeta del proyecto
 4. Pega la ruta de la carpeta en la variable que se lla **ruta_carpeta** en la línea 15. Asegúrate de reemplazar las barras invertidas `\` por dobles barras `\\` en caso de que no se hayan reemplazado automáticamente
 5. Guarda los cambios realizados a `server.py`

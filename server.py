@@ -14,7 +14,7 @@ eng = matlab.engine.start_matlab()
 # Abrir la carpeta, y copiar y pegar la ruta AQUÍ
 ruta_carpeta = "C:\\Users\\2019p\\workspace\\metodos_numericos"
 
-ruta = ruta_carpeta + "\\matlab_scripts" // NO TOCAR
+ruta = ruta_carpeta + "\\matlab_scripts" # NO TOCAR
 eng.addpath(ruta, nargout=0)
 
 @app.route("/punto_equilibrio", methods=["POST"])

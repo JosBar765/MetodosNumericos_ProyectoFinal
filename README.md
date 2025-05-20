@@ -2,6 +2,8 @@
 
 Este proyecto conecta una aplicación web con MATLAB a través de Flask como backend y el **MATLAB Engine API for Python**. Permite a los usuarios ingresar datos financieros, como costos fijos y variables, para calcular el **Punto de Equilibrio Financiero** a través del **Método de Bisección**. Flask maneja las solicitudes del cliente, enviando los datos a MATLAB para realizar los cálculos, y luego devuelve los resultados al usuario en tiempo real. Este enfoque aprovecha las capacidades de MATLAB para el análisis financiero y proporciona una solución eficiente y escalable para la toma de decisiones financieras.
 
+Para ejecutar correctamente el programa, descarga y descomprime el archivo. Luego, sigue los pasos de a continuación.
+
 ## Autores
 
 - [@JosBar765](https://www.github.com/JosBar765) | Josué Barrios 0901-23-4777

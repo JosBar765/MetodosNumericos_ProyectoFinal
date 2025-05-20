@@ -11,9 +11,10 @@ CORS(app) # Sin esto no se pueden comunicar los archivos
 # Inicia el motor de MATLAB
 eng = matlab.engine.start_matlab()
 
-# Cambiar la ruta en donde se encuentre la carpeta descargada en GitHub
-ruta_carpeta = "C:\\Users\\2019p\\workspace";
-ruta = ruta_carpeta + "\\metodos_numericos\\matlab_scripts"
+# Abrir la carpeta, y copiar y pegar la ruta AQUÍ
+ruta_carpeta = "C:\\Users\\2019p\\workspace\\metodos_numericos"
+
+ruta = ruta_carpeta + "\\matlab_scripts" // NO TOCAR
 eng.addpath(ruta, nargout=0)
 
 @app.route("/punto_equilibrio", methods=["POST"])
